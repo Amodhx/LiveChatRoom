@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="291.0" prefWidth="428.0" style="-fx-background-color: rgba(14, 18, 113, 1); -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.liveChatroom.controller.loginFormController">
+   <children>
+      <TextField fx:id="textField" layoutX="26.0" layoutY="160.0" onAction="#onlogging" prefHeight="31.0" prefWidth="362.0" />
+      <JFXButton buttonType="RAISED" layoutX="315.0" layoutY="229.0" onAction="#onlogging" style="-fx-background-color: rgba(242, 22, 22, 1);" text="Log in" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="135.0" layoutY="45.0" text="Login Form" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
