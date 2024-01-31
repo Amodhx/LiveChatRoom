@@ -2,6 +2,11 @@ package lk.ijse.liveChatroom.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
@@ -20,17 +25,39 @@ public class serverFormController implements Initializable  {
     private VBox vbox;
     ServerSocket serverSocket ;
     public static String name  = "Amodh";
-    Socket socket ;
+    static Socket socket ;
     DataInputStream dataInputStream ;
      static DataOutputStream dataOutputStream ;
     static ArrayList<Socket> sockets = new ArrayList<>();
 
     public static String clientName ;
+    static ArrayList<String> names = new ArrayList<>();
     Text text = new Text("");
+    public static void sendImage(String msgtoSend ,String name) throws IOException {
+
+        for (int i = 0; i < sockets.size(); i++) {
+            dataOutputStream = new DataOutputStream(sockets.get(i).getOutputStream());
+            if (name.equals(names.get(i))){
+                dataOutputStream.writeUTF("me: "+msgtoSend);
+                dataOutputStream.flush();
+                continue;
+            }
+            clientFormController.imageClientName =name;
+            dataOutputStream.writeUTF(name+" : "+msgtoSend);
+            dataOutputStream.flush();
+        }
+    }
 
     public static void sendingMsg(String msg, String name) throws IOException {
-        for (Socket socket : sockets) {
-            dataOutputStream = new DataOutputStream(socket.getOutputStream());
+
+        for (int i = 0; i < sockets.size(); i++) {
+            dataOutputStream = new DataOutputStream(sockets.get(i).getOutputStream());
+            if (name.equals(names.get(i))){
+                dataOutputStream.writeUTF("me: "+msg);
+                dataOutputStream.flush();
+                continue;
+            }
+            clientFormController.imageClientName = name;
             dataOutputStream.writeUTF(name+" : "+msg);
             dataOutputStream.flush();
         }
