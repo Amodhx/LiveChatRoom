@@ -12,8 +12,8 @@ public class AppInitiAalizer extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/serverForm.fxml"))));
-        stage.setResizable(false);
-        stage.show();
+        //stage.setResizable(false);
+        //stage.show();
 
         Stage stage1 = new Stage();
         stage1.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/loginForm.fxml"))));

@@ -14,7 +14,6 @@ public class EmojiPicker extends VBox {
     private ListView<String> emojiListView;
 
     public EmojiPicker() {
-        // Load the emoji images
         List<String> emojis = new ArrayList<>();
 
         String[] emojiHtmlList = new String[]{"&#128514;","&#10084;","&#128525;","&#129315;","&#128522;",
@@ -29,18 +28,13 @@ public class EmojiPicker extends VBox {
             emojis.add(EmojiParser.parseToUnicode(em));
         }
 
-        // Create the emoji list view
         emojiListView = new ListView<>();
         emojiListView.setItems(FXCollections.observableArrayList(emojis));
 
-        // Customize the appearance of the list view
-//        emojiListView.setCellFactory(param -> new EmojiCell());
 
-        // Create the emoji picker hBox
         HBox hBox = new HBox(emojiListView);
         hBox.setPadding(new Insets(10));
 
-        // Set the picker hBox to the EmojiPicker
         getChildren().add(hBox);
     }
 
