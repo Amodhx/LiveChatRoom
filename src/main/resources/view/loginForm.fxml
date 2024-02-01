@@ -3,21 +3,33 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="291.0" prefWidth="428.0" style="-fx-background-color: rgba(14, 18, 113, 1); -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.liveChatroom.controller.loginFormController">
    <children>
-      <TextField fx:id="textField" layoutX="26.0" layoutY="160.0" onAction="#onlogging" prefHeight="31.0" prefWidth="362.0" />
-      <JFXButton buttonType="RAISED" layoutX="315.0" layoutY="229.0" onAction="#onlogging" style="-fx-background-color: rgba(242, 22, 22, 1);" text="Log in" textFill="WHITE">
+      <ImageView fitHeight="291.0" fitWidth="428.0">
+         <image>
+            <Image url="@../assets/image.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textField" layoutX="26.0" layoutY="162.0" onAction="#onlogging" prefHeight="31.0" prefWidth="362.0" promptText="Enter your Name" style="-fx-background-radius: 8;" />
+      <JFXButton buttonType="RAISED" layoutX="309.0" layoutY="232.0" onAction="#onlogging" prefHeight="23.0" prefWidth="58.0" style="-fx-background-color: rgba(242, 22, 22, 1); -fx-background-radius: 8;" text="Log in" textFill="WHITE">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
       </JFXButton>
-      <Label layoutX="135.0" layoutY="45.0" text="Login Form" textFill="WHITE">
+      <Label layoutX="33.0" layoutY="136.0" text="Login" textFill="WHITE">
          <font>
-            <Font name="Arial Bold" size="28.0" />
+            <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
+      <ImageView fitHeight="79.0" fitWidth="102.0" layoutX="163.0" layoutY="8.0">
+         <image>
+            <Image url="@../assets/SMASHINGLOGO____Variations_-_Opera_2_1_2024_2_09_56_PM-removebg-preview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

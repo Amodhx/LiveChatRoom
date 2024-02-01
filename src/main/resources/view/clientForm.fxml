@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -12,6 +13,11 @@
 
 <AnchorPane fx:id="pane" prefHeight="566.0" prefWidth="400.0" style="-fx-background-color: rgba(14, 18, 113, 1); -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.liveChatroom.controller.clientFormController">
     <children>
+      <AnchorPane layoutX="15.0" layoutY="524.0" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #FFFFFF;">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </AnchorPane>
         <AnchorPane layoutX="25.0" layoutY="71.0" prefHeight="436.0" prefWidth="354.0" style="-fx-background-color: rgba(87, 196, 211, 1); -fx-background-radius: 15;">
             <children>
                 <ScrollPane layoutY="-1.0" prefHeight="436.0" prefWidth="354.0">
@@ -26,8 +32,16 @@
                 <Font name="Arial Bold" size="23.0" />
             </font>
         </Label>
-      <TextField fx:id="text" layoutX="63.0" layoutY="524.0" onAction="#onsendButtonClick" prefHeight="26.0" prefWidth="220.0" />
-      <JFXButton layoutX="317.0" layoutY="525.0" onAction="#onsendButtonClick" style="-fx-background-color: #F0FF;" text="Send" />
+      <TextField fx:id="text" layoutX="62.0" layoutY="524.0" onAction="#onsendButtonClick" prefHeight="26.0" prefWidth="220.0" />
+      <AnchorPane layoutX="269.0" layoutY="524.0" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: #FFFFFF;">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </AnchorPane>
+      <JFXButton layoutX="327.0" layoutY="524.0" onAction="#onsendButtonClick" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: rgba(0, 255, 25, 1);" text="Send" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="283.0" layoutY="525.0">
          <image>
             <Image url="@../assets/download (3).png" />
@@ -37,6 +51,11 @@
       <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="25.0" layoutY="525.0">
          <image>
             <Image url="@../assets/download.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="566.0" fitWidth="400.0" opacity="0.32">
+         <image>
+            <Image url="@../assets/image.jpg" />
          </image>
       </ImageView>
       <JFXButton fx:id="imgebutton" layoutX="25.0" layoutY="525.0" onAction="#imageOnClick" prefHeight="11.0" prefWidth="26.0" />

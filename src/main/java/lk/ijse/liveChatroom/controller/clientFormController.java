@@ -15,6 +15,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import lk.ijse.liveChatroom.emojiPicker.EmojiPicker;
@@ -27,6 +30,8 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static javafx.scene.text.FontWeight.*;
 
 public class clientFormController implements Initializable {
     public static String clientName;
@@ -120,6 +125,7 @@ public class clientFormController implements Initializable {
                         String s = dataInputStream.readUTF();
                         Platform.runLater(()->{
                             Text text1 = new Text(s);
+                            text1.setFont(Font.font(18));
                             if (s.startsWith("me")) {
                                 if (s.startsWith("me: C")) {
                                     Image image = new Image(imgPath);
